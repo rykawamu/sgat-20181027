@@ -1,0 +1,33 @@
+function main()
+    for i in 1:100
+       fizz = ""
+       buzz = "" 
+
+       if i % 3 == 0
+           fizz = "Fizz"
+       end
+
+       if i % 5 == 0
+           buzz = "Buzz"
+       end
+
+       s = string(i)
+       for c in s
+           cs = string(c)
+           if cs == "3"
+               fizz = "Fizz"
+           elseif cs == "5"
+               buzz = "Buzz"
+           end
+       end
+
+       fizzbuzzplus = string(fizz, buzz)
+       if length(fizzbuzzplus) == 0
+           fizzbuzzplus = s
+       end
+
+       println(fizzbuzzplus)
+    end
+end
+
+main()
